@@ -1,4 +1,7 @@
 spring:
+  boot:
+    admin:
+      url: http://discovery:8080
   application:
     name: auth-service
   cloud:
