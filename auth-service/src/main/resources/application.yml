@@ -1,0 +1,17 @@
+server:
+  port: 8004
+
+spring:
+  boot:
+    admin:
+      url: http://discovery:8080
+  application:
+    name: auth-service
+management:
+  security:
+    enabled: false
+
+## Mybatis 配置
+mybatis:
+  typeAliasesPackage: cn.sm.alivepush.contract.entity
+  mapperLocations: classpath:mapper/*.xml
