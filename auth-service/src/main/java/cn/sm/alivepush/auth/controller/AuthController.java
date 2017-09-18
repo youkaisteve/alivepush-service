@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+import java.util.ArrayList;
 
 /**
  * Created by youkai on 2017/9/18.
@@ -29,7 +29,7 @@ public class AuthController {
         userService.save(user);
     }
     @GetMapping("/list")
-    public List<ApplicationUser> getUserList() {
+    public ArrayList<ApplicationUser> getUserList() {
         return userService.getUserList();
     }
 }
