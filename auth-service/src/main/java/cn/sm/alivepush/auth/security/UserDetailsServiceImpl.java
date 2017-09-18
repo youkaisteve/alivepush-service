@@ -1,7 +1,7 @@
 package cn.sm.alivepush.auth.security;
 
-import cn.sm.alivepush.auth.service.UserService;
 import cn.sm.alivepush.contract.entity.ApplicationUser;
+import cn.sm.alivepush.contract.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;

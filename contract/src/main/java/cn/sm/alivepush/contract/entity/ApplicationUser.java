@@ -1,11 +1,8 @@
 package cn.sm.alivepush.contract.entity;
 
-import com.sun.xml.internal.ws.developer.Serialization;
-
 /**
  * Created by youkai on 2017/8/18.
  */
-@Serialization
 public class ApplicationUser {
     private Long id;
     private String username;

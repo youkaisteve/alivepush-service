@@ -1,0 +1,22 @@
+spring:
+  boot:
+    admin:
+      url: http://discovery:8080
+  application:
+    name: auth-service
+  cloud:
+    config:
+      uri: http://alivepush-config-server:8040/
+      profile: default
+      label: master
+
+management:
+  security:
+    enabled: false
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+  client:
+    registryFetchIntervalSeconds: 5
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVICE_URL:http://discovery:8761}/eureka/

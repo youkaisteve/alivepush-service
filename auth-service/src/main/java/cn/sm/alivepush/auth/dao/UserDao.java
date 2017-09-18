@@ -2,6 +2,7 @@ package cn.sm.alivepush.auth.dao;
 
 import cn.sm.alivepush.contract.entity.ApplicationUser;
 import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 
