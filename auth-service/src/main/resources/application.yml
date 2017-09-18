@@ -1,6 +1,17 @@
 server:
   port: 8004
 
+management:
+  security:
+    enabled: false
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+  client:
+    registryFetchIntervalSeconds: 5
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVICE_URL:http://discovery:8761}/eureka/
+
 ### Mybatis 配置
 #mybatis:
 #  typeAliasesPackage: cn.sm.alivepush.contract.entity
