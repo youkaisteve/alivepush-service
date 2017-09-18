@@ -6,7 +6,7 @@ spring:
     name: auth-service
   cloud:
     config:
-      uri: http://alivepush-config-server:8040/
+      uri: http://config-server:8040/
       profile: default
       label: master
 
