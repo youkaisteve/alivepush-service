@@ -3,6 +3,7 @@ package cn.sm.alivepush.auth.controller;
 import cn.sm.alivepush.contract.entity.ApplicationUser;
 import cn.sm.alivepush.contract.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,6 +13,7 @@ import java.util.ArrayList;
  * Created by youkai on 2017/9/18.
  */
 @RestController
+@RefreshScope
 @RequestMapping("/auth")
 public class AuthController {
     private BCryptPasswordEncoder bCryptPasswordEncoder;
