@@ -1,6 +1,4 @@
 spring:
-  profiles:
-    active: dev
   boot:
     admin:
       url: http://discovery:8080
