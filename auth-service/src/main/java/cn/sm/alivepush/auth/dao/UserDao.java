@@ -5,6 +5,9 @@ import org.apache.ibatis.annotations.Mapper;
 
 import java.util.ArrayList;
 
+/**
+ * @author youkai
+ */
 @Mapper
 public interface UserDao {
     ArrayList<ApplicationUser> getUserList();

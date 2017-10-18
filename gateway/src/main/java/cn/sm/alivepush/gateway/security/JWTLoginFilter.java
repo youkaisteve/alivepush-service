@@ -1,4 +1,10 @@
-package cn.sm.alivepush.auth.security;
+/**
+ * 验证
+ * @author youkai
+ * @date 2017/10/17
+ */
+
+package cn.sm.alivepush.gateway.security;
 
 import cn.sm.alivepush.common.utils.JacksonMapper;
 import cn.sm.alivepush.contract.entity.ApplicationUser;
@@ -19,14 +25,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 
-/**
- * Created by youkai on 2017/8/15.
- * 验证
- */
-public class JWTLoginFilter extends UsernamePasswordAuthenticationFilter {
+public class JwtLoginFilter extends UsernamePasswordAuthenticationFilter {
     private AuthenticationManager authenticationManager;
 
-    public JWTLoginFilter(AuthenticationManager authenticationManager) {
+    public JwtLoginFilter(AuthenticationManager authenticationManager) {
         this.authenticationManager = authenticationManager;
     }
 

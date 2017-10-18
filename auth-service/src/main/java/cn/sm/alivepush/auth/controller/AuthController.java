@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,34 +14,23 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
- * Created by youkai on 2017/9/18.
+ *
+ * @author youkai
+ * @date 2017/9/18
  */
 @RestController
-@RefreshScope
 @RequestMapping("/auth")
 public class AuthController {
-    private BCryptPasswordEncoder bCryptPasswordEncoder;
-
     @Autowired
     private UserService userService;
 
-    @Value("${profile}")
-    private String profile;
-
-    public AuthController(BCryptPasswordEncoder bCryptPasswordEncoder) {
-        this.bCryptPasswordEncoder = bCryptPasswordEncoder;
+    @GetMapping("/user")
+    public ApplicationUser findByUsername(@RequestParam String userName) {
+        return userService.findByUsername(userName);
     }
 
-    @GetMapping("/info")
-    public HashMap serviceInfo() {
-        HashMap map = new HashMap();
-        map.put("profile", profile);
-        return map;
-    }
-
-    @PostMapping("/sign-up")
-    public void signUp(@RequestBody ApplicationUser user) {
-        user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
+    @PostMapping("/save")
+    public void save(@RequestBody ApplicationUser user) {
         userService.save(user);
     }
 

@@ -10,21 +10,26 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 
 /**
- * Created by youkai on 2017/8/18.
+ *
+ * @author youkai
+ * @date 2017/8/18
  */
 @Service
-public class UserServiceImp implements UserService {
+public class UserServiceImpl implements UserService {
     @Autowired
     private UserDao userDao;
 
+    @Override
     public ArrayList<ApplicationUser> getUserList() {
         return userDao.getUserList();
     }
 
+    @Override
     public ApplicationUser findByUsername(String userName) {
         return userDao.findByUsername(userName);
     }
 
+    @Override
     public void save(ApplicationUser user) {
         userDao.save(user);
     }

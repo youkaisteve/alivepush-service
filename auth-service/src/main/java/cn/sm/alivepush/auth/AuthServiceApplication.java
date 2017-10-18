@@ -12,10 +12,6 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 @EnableDiscoveryClient
 @SpringBootApplication
 public class AuthServiceApplication {
-    @Bean
-    public BCryptPasswordEncoder bCryptPasswordEncoder() {
-        return new BCryptPasswordEncoder();
-    }
     public static void main(String[] args) {
         SpringApplication.run(AuthServiceApplication.class, args);
     }

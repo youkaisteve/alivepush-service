@@ -1,4 +1,4 @@
-package cn.sm.alivepush.auth.security;
+package cn.sm.alivepush.gateway.security;
 
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -30,8 +30,8 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.GET, "/", "/favicon.ico", "/v2/api-docs", "/swagger-resources/**", "/configuration/security", "/swagger-ui.html", "/webjars/**").permitAll()
                 .anyRequest().authenticated()
                 .and()
-                .addFilter(new JWTLoginFilter(authenticationManager()))
-                .addFilter(new JWTAuthorizationFilter(authenticationManager()));
+                .addFilter(new JwtLoginFilter(authenticationManager()))
+                .addFilter(new JwtAuthorizationFilter(authenticationManager()));
     }
 
     @Override

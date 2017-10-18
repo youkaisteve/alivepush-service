@@ -1,4 +1,4 @@
-package cn.sm.alivepush.auth.security;
+package cn.sm.alivepush.gateway.security;
 
 /**
  * Created by youkai on 2017/8/15.

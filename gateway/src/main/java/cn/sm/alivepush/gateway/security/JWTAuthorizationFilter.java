@@ -1,4 +1,10 @@
-package cn.sm.alivepush.auth.security;
+/**
+ * 授权
+ * @author youkai
+ * @date 2017/10/17
+ */
+
+package cn.sm.alivepush.gateway.security;
 
 import io.jsonwebtoken.Jwts;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -13,12 +19,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
 
-/**
- * Created by youkai on 2017/8/15.
- * 授权
- */
-public class JWTAuthorizationFilter extends BasicAuthenticationFilter {
-    public JWTAuthorizationFilter(AuthenticationManager authenticationManager) {
+public class JwtAuthorizationFilter extends BasicAuthenticationFilter {
+    public JwtAuthorizationFilter(AuthenticationManager authenticationManager) {
         super(authenticationManager);
     }
 
