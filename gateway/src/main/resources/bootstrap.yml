@@ -4,6 +4,10 @@ spring:
       url: http://monitor:8080
   application:
     name: gateway
+  devtools:
+    remote:
+      restart:
+        enabled: true
   cloud:
     config:
       uri: http://config-server:8040/
